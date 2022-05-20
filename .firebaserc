@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "simplechat-dc456": {
+      "hosting": {
+        "ChatStarterKit": [
+          "simplechat-dc456"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "simplechat-dc456"
+  }
+}

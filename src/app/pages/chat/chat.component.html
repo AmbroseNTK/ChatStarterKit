@@ -1,0 +1,116 @@
+<nb-layout>
+    <nb-layout-header style="position: sticky; top: 0;">
+        <h1 style="font-size: 1.5rem;">
+            Chat Starter Kit
+        </h1>
+        <span style="flex: 1 auto;"></span>
+        <button nbButton size="small" style="margin:5px;" (click)="addFriend()">Add friends</button>
+        <button nbButton size="small">Logout</button>
+    </nb-layout-header>
+    <nb-sidebar>
+
+        <div style="display: flex; flex-direction: column;">
+            <div style="flex: 1;">
+                <h2 style="font-size: 1.0rem;">Friends</h2>
+                <nb-list>
+                    <nb-list-item>
+                        <button style="background: none; border: none;">
+                            <nb-user></nb-user>
+                        </button>
+                    </nb-list-item>
+                </nb-list>
+                <h2 style="font-size:1.0rem;">Waiting list</h2>
+                <nb-list>
+                    <nb-list-item style="display: flex; flex-direction: column;">
+                        <div style="margin-bottom:10px;">
+                            <nb-user></nb-user>
+                        </div>
+                        <div>
+                            <button nbButton status="success" size="small" style="margin-bottom:10px; width: 100%;">
+                                <nb-icon icon="checkmark-outline"></nb-icon>
+                                Accept
+                            </button>
+                            <button nbButton status="danger" size="small" style="width:100%">
+                                <nb-icon icon="close-outline"></nb-icon>
+                                Reject
+                            </button>
+                        </div>
+
+                    </nb-list-item>
+                </nb-list>
+            </div>
+
+        </div>
+    </nb-sidebar>
+
+    <nb-layout-column style="padding: 0;">
+        <div style=" display: flex; flex-direction: column; width: 100%; height: 100%; ">
+            <nb-card #nameCard status="primary"
+                style="box-shadow:0 8px 16px 0px rgba(0,0,0,0.2);position: sticky; top: 0;">
+                <nb-card-header>
+                    <div style="display: flex; flex-direction: row; justify-content: space-between;">
+                        <span style="font-size: 1.2rem; color:#fff;">
+                            Nguyen Van Teo
+
+                        </span>
+                        <span>
+                            <button nbButton shape="round" size="small">
+                                <nb-icon icon="trash-2-outline"></nb-icon>
+                            </button>
+                        </span>
+
+                    </div>
+
+                </nb-card-header>
+            </nb-card>
+            <div style="display: flex; flex-direction: column;  width: 100%; flex: 1;">
+                <div style="flex:1;">
+                    <nb-list style="height: 100%; width: 100%;">
+
+                        <nb-list-item>
+                            <app-message style="width:100%" [isSender]="true"></app-message>
+                        </nb-list-item>
+                        <nb-list-item>
+                            <app-message style="width:100%"></app-message>
+                        </nb-list-item>
+                        <nb-list-item>
+                            <app-message style="width:100%"></app-message>
+                        </nb-list-item>
+                        <nb-list-item>
+                            <app-message style="width:100%"></app-message>
+                        </nb-list-item>
+                        <nb-list-item>
+                            <app-message style="width:100%"></app-message>
+                        </nb-list-item>
+                        <nb-list-item>
+                            <app-message style="width:100%"></app-message>
+                        </nb-list-item>
+                        <nb-list-item>
+                            <app-message style="width:100%"></app-message>
+                        </nb-list-item>
+                        <nb-list-item>
+                            <app-message style="width:100%"></app-message>
+                        </nb-list-item>
+                    </nb-list>
+                </div>
+
+
+
+            </div>
+            <div style="position: sticky; bottom: 0;">
+                <nb-card style="height: 100%;">
+                    <nb-card-body style="display: flex; flex-direction: column; justify-content: center;">
+                        <nb-form-field>
+                            <input nbInput fullWidth shape="round" placeholder="Type your message here">
+                            <button nbSuffix nbButton ghost>
+                                <nb-icon [icon]="'navigation-2-outline'" pack="eva">
+                                </nb-icon>
+                            </button>
+                        </nb-form-field>
+                    </nb-card-body>
+                </nb-card>
+            </div>
+        </div>
+
+    </nb-layout-column>
+</nb-layout>

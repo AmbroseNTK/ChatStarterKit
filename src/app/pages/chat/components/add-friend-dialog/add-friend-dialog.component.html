@@ -1,0 +1,13 @@
+<nb-card>
+    <nb-card-header>
+        Add new friend
+    </nb-card-header>
+    <nb-card-body>
+        Enter friend email
+        <input nbInput fullWidth>
+    </nb-card-body>
+    <nb-card-footer>
+        <button nbButton status="success" (click)="addFriend()" style="margin: 10px;">Add</button>
+        <button nbButton status="danger" (click)="cancel()">Cancel</button>
+    </nb-card-footer>
+</nb-card>

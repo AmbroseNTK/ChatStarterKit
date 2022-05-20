@@ -1,0 +1,9 @@
+<div style="display:flex; flex-direction: row; width: 100%;">
+    <span *ngIf="isSender" style="flex: 1 auto;"></span>
+    <div
+        style="justify-self: end; border-radius: 10px; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); background-color: #fff; display: flex; flex-direction: row;padding: 10px;">
+        <img [src]="photo" style="width:30px; height:30px; border-radius: 50%; margin-right: 10px;">
+        <div style="flex: 1 auto; font-size: 1rem; max-width: 50vw;" [nbTooltip]="time" nbTooltipPlacement="top">
+            {{message}}</div>
+    </div>
+</div>
